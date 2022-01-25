@@ -25,7 +25,8 @@ vector<int> primesum(int A) {
 }
 
 int main(){
-  vector<int> arr=primesum(10);
-  cout<<arr[0]<<" ,"<<arr[1]<<endl;
+//   vector<int> arr=primesum(10);
+//   cout<<arr[0]<<" ,"<<arr[1]<<endl;
+cout<<(-1)%(5);
   return 0;
 }
