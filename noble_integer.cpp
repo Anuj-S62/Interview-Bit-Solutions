@@ -9,11 +9,17 @@ void disp(vector<int> arr){
 }
 int solve(vector<int> &A) {
     sort(A.begin(),A.end());
-    int i=0,j=A.size()-1;
-    // int j=A.size()-1;
+    int i=0;
+    int j=A.size()-1;
     for(i=0;i<A.size();i++){
-        if(i<A.size()-1 && A[i]==A[i+1])j--;
-        else if(A[i]==j)return 1;
+        if(i<A.size()-1 && A[i]==A[i+1]){
+            j--;
+            continue;
+        }
+        if(A[i]==j){
+
+            return 1;
+        }
         j--;
     }
     return -1;
