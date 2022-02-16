@@ -6,7 +6,6 @@ int singleNumber(const vector<int> &A) {
        int result = 0;
        for (int i = 0; i < n; i++) {
            result ^= A[i];
-           cout<<result<<endl;
        }
        return result;
     }
