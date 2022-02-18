@@ -11,14 +11,12 @@ int perfectPeak(vector<int> &A) {
             }
         }
         if(x==1){
-            cout<<i<<endl;
             return 1;
         }
         x=1;
     }
     return 0;
 }
-
 
 int main(){
     vector<int> arr={5706, 26963, 24465, 29359, 16828, 26501, 28146, 18468, 9962, 2996, 492, 11479, 23282, 19170, 15725, 6335};
