@@ -12,7 +12,7 @@ int titleToNumber(string s) {
 
 
 int main(){
-    cout<<titleToNumber("AABB")<<endl;
+    cout<<titleToNumber("AZ")<<endl;
 
     return 0;
 }
