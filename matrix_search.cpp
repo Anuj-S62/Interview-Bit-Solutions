@@ -32,7 +32,7 @@ int searchMatrix(vector<vector<int> > &A, int B) {
         if(B>A[midMain][A[0].size()-1] && B<A[midMain+1][0]) return 0;
         prev=midMain;
         midMain = (lowMain+highMain)/2;
-        cout<<lowMain<<" "<<midMain<<" "<<highMain<<endl;
+        // cout<<lowMain<<" "<<midMain<<" "<<highMain<<endl;
     } 
     if(A[i][0]==B)return 1;
     int high=A[0].size()-1;

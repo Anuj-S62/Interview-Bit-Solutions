@@ -30,30 +30,30 @@ ListNode * show(struct ListNode *top)
     return top;
 }
 
-ListNode* rotateRight(ListNode* A, int B) {
-    // show(A);
-    ListNode* p=A;
-    ListNode* q=A;
-    ListNode* head=A;
-    ListNode* x=A;
-    
-    int size=1;
-    while(x->next){
-        size++;
-        x=x->next;
-    }
-    B=B % size;
-    for(int i=0;i<size-B-1;i++){
-        q=q->next;
-        head=head->next;
-    }
-    head=head->next;
-    q->next=NULL;
-    x->next=p;
-    // show(head);
-    return head;
+ListNode* reverseList(ListNode* A, int B) {
+    ListNode*mh=new ListNode(0),*mt=mh,*h=NULL,*t=h,*p=A,*nxt=NULL;
 
+    while(p!=NULL)
+    {
+        int b=B;
+        h=NULL;t=NULL;
+        while(b--)
+        {
+            nxt=p->next;
+            p->next=h;
+            h=p;
+            if(t==NULL)t=h;
+            p=nxt;
+        }
+        mt->next=h;
+        mt=t;
+        mt->next=NULL;
+    }
+
+    return mh->next;
 }
+
+
 
 int main(){
     ListNode *l1 = new ListNode(0);
@@ -68,6 +68,7 @@ int main(){
         ptr = ptr->next;
         a++;
     }
-    rotateRight(l1,6);
+    reverseList(l1,3);
+
     return 0;
 }
