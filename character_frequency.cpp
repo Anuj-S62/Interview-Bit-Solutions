@@ -19,21 +19,12 @@ vector<int> solve(string A) {
         temp[idx]++;
     }
     vector<int> freq;
-    // for(int i=0;i<26;i++){
-    //     if(temp[i]) freq.push_back(temp[i]);
-    // }
-    // show(freq);
-    // temp.clear();
-    // temp.push_back(3);
-    show(temp);
-
     for(int i=0;i<A.length();i++){
         int idx=A[i]-97;
         if(temp[idx]) freq.push_back(temp[idx]);
         temp[idx]=0;
     }
-    show(freq);
-    return temp;
+    return freq;
 }
 
 int main(){
