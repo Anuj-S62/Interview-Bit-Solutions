@@ -25,7 +25,6 @@ string countAndSay(int A) {
 
 }
 
-
 int main(){
     cout<<countAndSay(6)<<endl;
 
