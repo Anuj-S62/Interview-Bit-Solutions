@@ -92,12 +92,12 @@ string factorial(int n){
         temp=add(temp,"1");
         ans=multiply(ans,temp);
     }
-    cout<<n<<" = "<<endl;
+    cout<<n<<"! = "<<endl;
     return ans;
 }
 
 int main(){
-    cout<<factorial(2000)<<endl;
+    cout<<factorial(100)<<endl;
 
     return 0;
 }
