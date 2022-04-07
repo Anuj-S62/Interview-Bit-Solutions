@@ -9,32 +9,6 @@ struct ListNode {
     ListNode(int x) : val(x), next(NULL) {}
 };
 
-// ListNode* sortList(ListNode* A) {
-//     vector<int> ans;
-//     ListNode* ptr = A;
-//     while(ptr){
-//         ans.push_back(ptr->val);
-//         ptr=ptr->next;
-//     }
-//     sort(ans.begin(),ans.end());
-//     ptr = A;
-//     int i=0;
-//     while(ptr){
-//         ptr->val = ans[i];
-//         i++;
-//         ptr=ptr->next;
-//     }
-//     return A;
-// }
-
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
- */
 
 ListNode *show(struct ListNode *top)
 {
@@ -64,11 +38,6 @@ ListNode* create(int val){
     return node;
 }
 
-void swap(int &a,int &b){
-    int x = b;
-    b = a;
-    a = x;
-}
 
 void merge(ListNode* A,int low,int mid,int high){
     ListNode* i = A;
@@ -76,7 +45,6 @@ void merge(ListNode* A,int low,int mid,int high){
     ListNode* k = A;
     ListNode* l = A;
     ListNode* ptr1 = A;
-    // ListNode* ptr2 = A;
     int x = low-1;
     while(x){
         i=i->next;
@@ -98,7 +66,6 @@ void merge(ListNode* A,int low,int mid,int high){
         l = l->next;
         x--;
     }
-    // ptr2 = l;
     vector<int> temp;
     while(i!=j->next && k!=l->next){
         if(i->val > k->val){
