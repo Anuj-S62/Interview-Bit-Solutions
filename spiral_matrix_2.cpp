@@ -10,7 +10,12 @@ void show(vector<vector<int>> arr){
     }
 }
 
-vector<vector<int> > solve(vector<int> &A, int B, int C) {
+vector<vector<int> > generateMatrix(int y) {
+    vector<int> A;
+    int B = y,C = y;
+    for(int i=1;i<=y*y;i++){
+        A.push_back(i);
+    }
     vector<vector<int>> ans;
     vector<int> temp;
     for(int i=0;i<C;i++){
@@ -63,7 +68,7 @@ int main(){
     for(int i=100;i<=1000;i++){
         a.push_back(i);
     }
-    solve(a,30,30);
+    generateMatrix(7);
 
     return 0;
 }

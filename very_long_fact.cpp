@@ -88,11 +88,11 @@ string factorial(int n){
     string ans="1";
     string temp="1";
     for(int i=2;i<=n;i++){
-        cout<<temp<<" * ";
+        // cout<<temp<<" * ";
         temp=add(temp,"1");
         ans=multiply(ans,temp);
     }
-    cout<<n<<"! = "<<endl;
+    // cout<<n<<"! = "<<endl;
     return ans;
 }
 
