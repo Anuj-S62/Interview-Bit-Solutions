@@ -92,7 +92,7 @@ vector<vector<string> > solveNQueens(int A) {
 
 
 int main(){
-    vector<vector<string>> res = solveNQueens(12);
+    vector<vector<string>> res = solveNQueens(10);
     show(res);
 
     return 0;
