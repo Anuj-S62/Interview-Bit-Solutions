@@ -10,13 +10,6 @@ void show(vector<vector<int>> arr){
     }
 }
 
-void stemp(vector<int> arr){
-    for(int i=0;i<arr.size();i++){
-        cout<<arr[i]<<" ";
-    }
-    cout<<endl;
-}
-
 string con(int n){
     string res;
     while(n){
