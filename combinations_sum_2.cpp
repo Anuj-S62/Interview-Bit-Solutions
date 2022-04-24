@@ -31,7 +31,6 @@ string convert(vector<int> arr){
 
 void comb(int x,vector<int> &arr, vector<vector<int>> &res,int sum,int t,vector<int> &temp,unordered_set<string> &st){
     for(int i=x;i<arr.size();i++){
-        // if(count>0 && arr[i-1]==arr[i]) continue;
         sum += arr[i];
         if(sum < t){
             temp.push_back(arr[i]);
@@ -42,14 +41,12 @@ void comb(int x,vector<int> &arr, vector<vector<int>> &res,int sum,int t,vector<
             string s = convert(temp);
             if(st.find(s)==st.end()) res.push_back(temp);
             st.insert(s);
-            // show(res);
             temp.pop_back();
             return ;
         }
         else return;
         sum -= arr[i];
         temp.pop_back();
-        // if(!temp.size()) count++;
     }
     return;
 }
@@ -64,15 +61,15 @@ vector<vector<int>> temp(vector<vector<int>> arr){
 }
 
 int main(){
-    vector<int> arr = { 10, 14, 4, 8, 19, 10, 5, 7, 20, 11};
+    // vector<int> arr = { 2,3,6,7};
     // vector<int> arr = {15, 8, 15, 10, 19, 18, 10, 3, 11, 7, 17 };
-    // vector<int> arr = {10,1,2,7,6,1,5};
+    vector<int> arr = {10,1,2,7,6,1,5};
     // vector<int> arr = {1,3,1,6};
     sort(arr.begin(),arr.end());
     vector<vector<int>> ans;
     vector<int> temp;
     unordered_set<string> st;
-    comb(0,arr,ans,0,31,temp,st);
+    comb(0,arr,ans,0,8,temp,st);
     show(ans);
 
     return 0;
