@@ -8,7 +8,6 @@ void show(vector<vector<int>> arr){
             cout<<arr[i][j]<<" ";
         }
         cout<<endl;
-        // cout<<"------------------------"<<endl;
     }
 }
 
