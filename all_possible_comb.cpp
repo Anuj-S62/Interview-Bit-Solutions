@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+
 void show(vector<string> arr){
     for(int i = 0;i<arr.size();i++){
         cout<<arr[i]<<endl;
