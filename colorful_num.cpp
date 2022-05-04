@@ -10,7 +10,6 @@ long long int multiply(int n){
     }
     return prod;
 }
-
 int colorful(int A) {
     unordered_set<long long int> st;
     int x = 10;
