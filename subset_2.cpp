@@ -46,14 +46,12 @@ void sub(vector<int> &arr,vector<vector<int>> &ans,vector<int> &temp,int x,unord
     return;
 }
 vector<vector<int> > subsetsWithDup(vector<int> &A) {
-    // vector<int> arr = {1,2,2};
     vector<vector<int>> ans;
     vector<int> temp;
     sort(A.begin(),A.end());
     unordered_set<string> st;
     sub(A,ans,temp,0,st);
     sort(ans.begin(),ans.end());
-    // show(ans);  
     return ans;
 }
 
