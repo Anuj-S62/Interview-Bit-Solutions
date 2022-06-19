@@ -56,7 +56,7 @@ vector<vector<int> > subsetsWithDup(vector<int> &A) {
 }
 
 int main(){
-    vector<int> arr = {1,2,2};
+    vector<int> arr = {4,1,0};
     vector<vector<int>> ans;
     vector<int> temp;
     unordered_set<string> st;

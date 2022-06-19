@@ -47,7 +47,6 @@ ListNode* partition(ListNode* head, int x) {
     ptr3 = ptr2;
     ptr = ptr2;
     while(ptr){
-        // cout<<ptr->val<<endl;
         if(ptr->next and ptr->next->val<x){
             ptr3 = ptr;
             ptr4 = ptr3->next;

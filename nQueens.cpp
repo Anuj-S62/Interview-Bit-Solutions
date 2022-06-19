@@ -4,7 +4,7 @@ using namespace std;
 void show(vector<vector<string>> res){
     for(int i=0;i<res.size();i++){
         for(int j=0;j<res[i].size();j++){
-            cout<<res[i][j]<<endl;
+            cout<<res[i][j]<<" "<<endl;
         }
         cout<<"---------------------"<<endl;
     }

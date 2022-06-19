@@ -53,11 +53,11 @@ string multiply2(string a,int num){
         int x=(a1*num + carry)%10;
         carry=(a1*num + carry)/10;
         char temp = x+48;
-        res=res+temp;
+        res=res+temp;  //res.push_back(temp)   we can also use push_front(temp)
     }
     if(carry>0){
         char temp = carry+48;
-        res=res+temp;
+        res=res+temp;  //res.push_front(temp)
     }
     reverse(res.begin(),res.end());
     return res;
@@ -97,7 +97,10 @@ string factorial(int n){
 }
 
 int main(){
-    cout<<factorial(1000)<<endl;
+    // cout<<factorial(1000)<<endl;
+    string s1 = "12";
+    string s2 = "12";
+    cout<<multiply(s1,s2)<<endl;
 
     return 0;
 }
