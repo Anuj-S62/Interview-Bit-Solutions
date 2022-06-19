@@ -28,7 +28,6 @@ int solve(vector<int> &A, int B) {
         dp[i][0] = 1; 
     }
     for(int j = 1;j<dp[0].size();j++) dp[0][j] = 0;
-    // disp(dp);
 
     if(subset(A,B,A.size(),dp)) return 1;
     return 0;

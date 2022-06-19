@@ -2,6 +2,7 @@
 using namespace std;
 
 
+
 // Definition for singly-linked list.
 struct ListNode {
     int val;
@@ -23,7 +24,6 @@ ListNode* mergeKLists(vector<ListNode*> &A) {
             ptr = ptr->next;
         }
     }
-
     for(int i = 0;i<A.size()-1;i++){
         ListNode* ptr = A[i];
         while(ptr->next) ptr = ptr->next;
@@ -33,6 +33,7 @@ ListNode* mergeKLists(vector<ListNode*> &A) {
     ListNode* ptr = head;
     while(pq.size()){
         ptr->val = -1*(pq.top());
+        ptr = ptr->next;
         pq.pop();
     }
     return head;

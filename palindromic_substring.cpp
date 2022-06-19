@@ -1,25 +1,24 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-bool isPlain(string s,int l,int h){
-    if(l==h-1 || l==h) return true;
-    if(s[l]!=s[h]) return false;
-    return isPlain(s,l+1,h-1);
-}
-
-void sub(string s,int &count,int l,int h){
-    if(isPlain(s,l,h)){
-        count += 
-    }
+int sub(string s,int l,int r){
+    if(l<0 || r>=s.length()) return 0;
+    if(s[l]==s[r]) return 1+sub(s,l-1,r+1);
+    else return 0;
 }
 
 int solve(string A) {
+    int count = 0;
+    for(int i = 0;i<A.length();i++){
+        count += sub(A,i,i);
+        count += sub(A,i,i+1);
+    }
+    return count;
 }
 
-
 int main(){
-    string s = "aba";
-    cout<<isPlain(s,0,2)<<endl;
-
+    string s = "aaa";
+    cout<<solve(s);
+    // cout<<sub(s,3,3);
     return 0;
 }
