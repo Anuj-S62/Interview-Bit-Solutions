@@ -36,7 +36,7 @@ int solve(int A) {
 
 
 int main(){
-    cout<<solve(33);
+    cout<<solve(2);
 
     return 0;
 }
